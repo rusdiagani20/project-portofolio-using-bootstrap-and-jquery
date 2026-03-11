@@ -5,6 +5,19 @@
 
 section {
     padding-top: 128px;
+    position: relative;
+}
+
+section::before {
+    z-index: -1;
+    content: '';
+    font-size: 72px;
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    opacity: 0.25;
+    position: absolute;
+    top: 20px;
+    left: -30px;
 }
 
 .navbar {
@@ -22,7 +35,7 @@ section {
     padding: 10px 40px
 }
 
-.btn.button:hover {
+.btn.button:hover, .btn.button:active {
     background-color: black;
     border: 2px solid black;
     color: white;
@@ -54,4 +67,29 @@ section {
     100% {
         transform: translateY(0);
     }
+}
+
+#about:before {
+    content: 'About';
+}
+
+.about-item {
+    margin-top: 32px;
+}
+
+.about-item-header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-item-header h5 {
+    font-weight: bold;
+}
+
+.about-item-header p {
+    color: rgb(82, 80, 80);
+}
+
+.about-item-detail {
+    display: none;
 }
