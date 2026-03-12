@@ -21,7 +21,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="#landing">Home</a>
+                        <a class="nav-link" aria-current="page" href="#home">Home</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#about">About</a>
@@ -37,21 +37,21 @@
     </nav>
 
     <section id="home" class="home container">
-        <div class="row d-flex align-items-center">
-            <div class="col-8">
+        <div class="row d-flex align-items-center flex-md-row flex-column-reverse">
+            <div class="col-12 col-md-8">
                 <h3 class="fw-semibold">Hi! I Am</h3>
                 <h1 class="fw-bold">Gani Fam</h1>
                 <p>A Software Engineer based in Indonesia</p>
                 <a href="images/potrait.png" class="btn button" download>Resume</a>
             </div>
-            <div class="col-4">
+            <div class="col-12 col-md-4 d-flex justify-content-md-end justify-content-center">
                 <img class="w-100" src="images/potrait.png" alt="Home Image">
             </div>
         </div>
-        <div class="arrow w-100 d-flex align-items-center flex-column mt-3">
-            <a class="fs-6 text-decoration-none text-dark" href="#about">More info</a>
+        <a href="#about" class="text-decoration-none arrow w-100 d-flex align-items-center flex-column mt-2">
+            <div class="fs-6 text-dark">More info</div>
             <img id="arrow" class="mt-2" src="images/arrow.svg" alt="Arrow image">
-        </div>
+        </a>
     </section>
 
     <section id="about" class="about container">
@@ -97,7 +97,7 @@
     </section>
 
     <section id="work" class="work container">
-        <div class="row d-flex align-items-center gap-5">
+        <div class="row d-flex align-items-center gap-5 flex-md-row flex-column">
             <div class="col">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio commodi delectus dolor reiciendis laboriosam officiis enim odit itaque incidunt? Rerum unde voluptatibus voluptate? Quam explicabo eligendi optio amet. Beatae, aut?</p>
             </div>
@@ -111,6 +111,47 @@
                 <div id="work-3" class="work-img-item">
                     <img src="images/work-3.png" alt="Work 3 Image">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact container">
+        <div class="row d-flex align-items-center gap-5 flex-md-row flex-column">
+            <div class="col-12 col-lg-6">
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis deserunt aliquid modi? Blanditiis, beatae officia.</p>
+                <div class="row">
+                    <div class="col social-media-item">
+                        <img src="images/Facebook.svg" alt="Facebook Image">
+                        <p>Gani Fam</p>
+                    </div>
+                    <div class="col social-media-item">
+                        <img src="images/Instagram.svg" alt="Instagram Image">
+                        <p>@gani_fam</p>
+                    </div>
+                    <div class="col social-media-item">
+                        <img src="images/Twitter.svg" alt="Twitter Image">
+                        <p>@gani_fam</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5 border-dark">
+                <form class="contact-form" onsubmit="onFormSubmit(event)">
+                    <div class="mb-3">
+                        <label for="inputEmail" class="form-label">Email</label>
+                        <input type="email" class="form-control form-input" id="inputEmail" placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputSubject" class="form-label">Subject</label>
+                        <input type="text" class="form-control form-input" id="inputSubject" placeholder="Your Subject">
+                    </div>
+                    <div class="mb-3">
+                        <label for="inputMessage" class="form-label">Message</label>
+                        <textarea type="text" class="form-control form-input" id="inputMessage" placeholder="Your Message"></textarea>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn button">Submit</button>
+                    </div>
+                </form>
             </div>
         </div>
     </section>

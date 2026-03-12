@@ -1,6 +1,7 @@
 * {
     font-family: "Montserrat";
     scroll-behavior: smooth;
+    scroll-padding-top: 65px;
 }
 
 section {
@@ -22,6 +23,9 @@ section::before {
 
 .navbar {
     background-color: white;
+    position: sticky;
+    top: 0;
+    z-index: 5;
 }
 
 .navbar .nav-link:hover {
@@ -47,6 +51,10 @@ section::before {
 
 .home h3 {
     font-size: 48px;
+}
+
+.home img {
+    width: 100%;
 }
 
 .home .arrow img {
@@ -161,4 +169,70 @@ section::before {
 
 .work-img img {
     width: 100%;
+}
+
+.social-media-item {
+    display: flex;
+    align-items: center;
+}
+
+.social-media-item p {
+    margin-bottom: 0;
+    margin-left: 2px;
+}
+
+#contact::before {
+    content: 'Contact';
+}
+
+.contact {
+    padding-bottom: 50px;
+}
+
+.contact-form {
+    width: 100%;
+    border: 2px solid black;
+    padding: 64px 32px;
+    border-radius: 24px;
+}
+
+.form-label {
+    font-weight: 700;
+}
+
+.form-control.form-input {
+    box-shadow: none;
+    border: 1px solid black;
+}
+
+@media only screen and (max-width:430px) {
+    section::before {
+        left: 50px;
+        transform: translateX(10%);
+    }
+}
+
+@media only screen and (max-width:576px) {
+    section::before {
+        left: 0;
+    }
+}
+
+@media only screen and (max-width:768px) {
+    section::before {
+        left: -10px;
+    }
+    .home img {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width:992px) {
+    section::before {
+        left: -10px;
+    }
+    .social-media {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
