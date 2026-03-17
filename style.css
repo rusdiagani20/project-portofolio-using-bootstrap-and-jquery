@@ -32,6 +32,11 @@ section::before {
     color: black;
 }
 
+.navbar-nav .nav-link.active {
+    color: black;
+    font-weight: 700;
+}
+
 .btn.button {
     background-color: white;
     border: 2px solid black;
@@ -51,6 +56,26 @@ section::before {
 
 .home h3 {
     font-size: 48px;
+}
+
+#typing-title {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid currentColor;
+    animation: blink-cursor 0.7s steps(1) infinite;
+    /* Stabilize layout height so text changes tidak mengubah tampilan vertikal */
+    min-height: 1.1em;
+    line-height: 1.1;
+}
+
+@keyframes blink-cursor {
+    0%, 50% {
+        border-color: currentColor;
+    }
+    51%, 100% {
+        border-color: transparent;
+    }
 }
 
 .home img {
