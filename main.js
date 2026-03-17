@@ -125,7 +125,33 @@ function setupNavActiveOnScroll() {
     onScroll()
 }
 
+// toogle light + dark themes
+function applyTheme(isDark) {
+    const $body = $('body')
+    if (isDark) {
+        $body.addClass('dark-mode')
+        $('#theme-toggle').text('☀️')
+    } else {
+        $body.removeClass('dark-mode')
+        $('#theme-toggle').text('🌙')
+    }
+    localStorage.setItem('theme', isDark ? 'dark' : 'light')
+}
+
+function setupThemeToggle() {
+    const saved = localStorage.getItem('theme')
+    const prefersDark = window.matchMedia?.('(prefers-color-scheme: dark)').matches
+    const isDark = saved ? saved === 'dark' : prefersDark
+
+    applyTheme(isDark)
+
+    $('#theme-toggle').on('click', () => {
+        applyTheme(!$('body').hasClass('dark-mode'))
+    })
+}
+
 $(document).ready(() => {
     startTyping('#typing-title', ['Gani Fam', 'Programmer'])
     setupNavActiveOnScroll()
+    setupThemeToggle()
 })
